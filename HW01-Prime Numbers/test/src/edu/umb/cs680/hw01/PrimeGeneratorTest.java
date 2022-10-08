@@ -42,6 +42,7 @@ public class PrimeGeneratorTest {
         assertArrayEquals(expected, gen.getPrimes().toArray(), "List of prime numbers generated.");
     }
 
+
     @Test
     public void isprimetest(){
         PrimeGenerator gen = new PrimeGenerator(1, 3);
