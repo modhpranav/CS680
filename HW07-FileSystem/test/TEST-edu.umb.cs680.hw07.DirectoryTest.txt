@@ -1,0 +1,17 @@
+Testcase: edu.umb.cs680.hw07.DirectoryTest
+Test: homeIsDirectoryTest() took 13 milli sec(s)
+Test: rootcountChildrenTest() took 2 milli sec(s)
+Test: homegetTotalSizeTest() took 1 milli sec(s)
+Test: libIsDirectoryTest() took 0 milli sec(s)
+Test: libDirectoryTest() took 1 milli sec(s)
+Test: getTotalSizeTest() took 1 milli sec(s)
+Test: homecountChildrenTest() took 1 milli sec(s)
+Test: appendChildrenTest() took 0 milli sec(s)
+Test: homeDirectoryTest() took 0 milli sec(s)
+Test: appsDirectoryTest() took 0 milli sec(s)
+Test: rootDirectoryTest() took 0 milli sec(s)
+Test: rootIsDirectoryTest() took 0 milli sec(s)
+Tests run: 12, Failures: 0, Skipped: 0, Aborted: 0, Time elapsed: 40 milli sec(s)
+------------- Standard Output ---------------
+[edu.umb.cs680.hw07.Directory@6f952d6c, edu.umb.cs680.hw07.Directory@5965844d, edu.umb.cs680.hw07.Directory@6d4a65c6]
+------------- ---------------- ---------------
