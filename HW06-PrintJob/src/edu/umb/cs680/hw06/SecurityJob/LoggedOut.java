@@ -1,4 +1,4 @@
-package edu.umb.cs680.hw05;
+package edu.umb.cs680.hw06.SecurityJob;
 
 public class LoggedOut implements State {
 
@@ -20,7 +20,7 @@ public class LoggedOut implements State {
         if (Authenticator.authenticate(ctx, pwd)){
             ctx.changeState(LoggedIn.getInstance());
         }else{
-            throw new Error("False pwd");
+            throw new Error("Wrong Password");
         }
     }
 
@@ -28,4 +28,6 @@ public class LoggedOut implements State {
     public void logout(SecurityContext ctx) {
         System.out.println("LogOut Successfully.");
     }
+
+    public static void main(String[] args){}
 }

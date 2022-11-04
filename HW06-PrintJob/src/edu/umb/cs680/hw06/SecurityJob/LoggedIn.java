@@ -1,4 +1,4 @@
-package edu.umb.cs680.hw05;
+package edu.umb.cs680.hw06.SecurityJob;
 
 public class LoggedIn implements State {
 
@@ -25,4 +25,6 @@ public class LoggedIn implements State {
     public void logout(SecurityContext ctx){
         ctx.changeState(LoggedOut.getInstance());
     }
+
+    public static void main(String[] args){}
 }

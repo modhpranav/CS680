@@ -1,4 +1,4 @@
-package edu.umb.cs680.hw05;
+package edu.umb.cs680.hw06.SecurityJob;
 
 public class SecurityContext {
 
@@ -21,7 +21,6 @@ public class SecurityContext {
     public void login(String pwd) {
         try {
             state.login(this, pwd);
-//        return false;
         }
         catch (Exception e){
             System.out.println(e);
@@ -36,7 +35,7 @@ public class SecurityContext {
         return this.isActive;
     }
 
-    public State getState() {
+    public static State getState() {
         return state;
     }
 
@@ -44,15 +43,6 @@ public class SecurityContext {
         return user;
     }
 
-    public static void main(String[] args){
-        String user = "abc";
-        String pwd = "asasd";
-        User userObj = new User(user, pwd);
-        SecurityContext ctx = new SecurityContext(userObj);
-        ctx.login("asasd");
-        System.out.println(ctx.getState() instanceof LoggedIn);
-        ctx.logout();
-        System.out.println(ctx.getState() instanceof  LoggedIn);
-    }
+    public static void main(String[] args){}
 
 }
