@@ -1,6 +1,6 @@
 Testcase: edu.umb.cs680.hw05.SecurityContextTest
-Test: isinstanceofloggedouttest() took 19 milli sec(s)
+Test: isinstanceofloggedouttest() took 14 milli sec(s)
 Test: isnotinstanceoflogintest() took 1 milli sec(s)
-Test: isnotinstanceofloggedouttest() took 1 milli sec(s)
-Test: isinstanceoflogintest() took 0 milli sec(s)
-Tests run: 4, Failures: 0, Skipped: 0, Aborted: 0, Time elapsed: 34 milli sec(s)
+Test: isnotinstanceofloggedouttest() took 0 milli sec(s)
+Test: isinstanceoflogintest() took 1 milli sec(s)
+Tests run: 4, Failures: 0, Skipped: 0, Aborted: 0, Time elapsed: 28 milli sec(s)

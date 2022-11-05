@@ -13,7 +13,7 @@ public class SecurityContextTest {
         User userObj = new User(user, pwd);
         SecurityContext ctx = new SecurityContext(userObj);
         ctx.login("asasd");
-        assertEquals(false, ctx.getState() instanceof LoggedOut);
+        assertEquals(true, ctx.getState() instanceof LoggedIn);
     }
 
     @Test
@@ -22,8 +22,7 @@ public class SecurityContextTest {
         String pwd = "asasd";
         User userObj = new User(user, pwd);
         SecurityContext ctx = new SecurityContext(userObj);
-        ctx.login("asasd");
-        assertEquals(false, ctx.getState() instanceof LoggedOut);
+        assertEquals(false, ctx.getState() instanceof LoggedIn);
     }
 
     @Test
@@ -34,7 +33,7 @@ public class SecurityContextTest {
         SecurityContext ctx = new SecurityContext(userObj);
         ctx.login("asasd");
         ctx.logout();
-        assertEquals(false, ctx.getState() instanceof LoggedIn);
+        assertEquals(true, ctx.getState() instanceof LoggedOut);
     }
 
     @Test
@@ -44,8 +43,7 @@ public class SecurityContextTest {
         User userObj = new User(user, pwd);
         SecurityContext ctx = new SecurityContext(userObj);
         ctx.login("asasd");
-        ctx.logout();
-        assertEquals(false, ctx.getState() instanceof LoggedIn);
+        assertEquals(false, ctx.getState() instanceof LoggedOut);
     }
 
 
