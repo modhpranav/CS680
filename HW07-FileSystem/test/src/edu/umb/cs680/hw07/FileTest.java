@@ -1,5 +1,6 @@
 package edu.umb.cs680.hw07;
 
+import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 
 import java.time.LocalDateTime;
@@ -8,22 +9,12 @@ import static org.junit.jupiter.api.Assertions.assertArrayEquals;
 import static org.junit.jupiter.api.Assertions.assertFalse;
 
 public class FileTest {
-    static LocalDateTime localTime = LocalDateTime.now();
+    public static FileSystem fs;
 
-    Directory root = new Directory(null, "root", 0, localTime);  // directory has size 0
-    Directory apps = new Directory(root, "apps", 0, localTime);  // directory has size 0
-    Directory lib = new Directory(root, "lib", 0, localTime);  // directory has size 0
-    Directory home = new Directory(root, "home", 0, localTime);  // directory has size 0
-
-    File x = new File(apps, "x", 50, localTime);
-    File y = new File(apps, "y", 50, localTime);
-
-    File z = new File(lib, "z", 50, localTime);
-    File d = new File(home, "d", 50, localTime);
-    Directory code = new Directory(home, "code", 0, localTime);
-    File a = new File(code, "a", 50, localTime);
-    File b = new File(code, "b", 50, localTime);
-    File c = new File(code, "c", 25, localTime);
+    @BeforeAll
+    public static void setUpFS(){
+        fs = new TestFixtureInitializer().createFS();
+    }
 
     private String[] fileToStringArray(File file) {
         return new String[]{ String.valueOf(file.isDirectory()), file.getName(), String.valueOf(file.getSize()),
@@ -32,27 +23,31 @@ public class FileTest {
 
     @Test
     public void verifyFileEqualityx() {
+        FSElement x = fs.getRootDirs().get(0).getChildren().get(0).getChildren().get(0);
         String[] expected = { "false", "x", "50", String.valueOf(x.getCreationTime()), "apps" };
-        File actual = x;
-        assertArrayEquals(expected, fileToStringArray(actual));
+        FSElement actual = x;
+        assertArrayEquals(expected, fileToStringArray((File) actual));
     }
 
     @Test
     public void verifyFileEqualityz() {
-        String[] expected = { "false", "z", "50", String.valueOf(x.getCreationTime()), "lib" };
-        File actual = z;
-        assertArrayEquals(expected, fileToStringArray(actual));
+        FSElement z = fs.getRootDirs().get(0).getChildren().get(1).getChildren().get(0);
+        String[] expected = { "false", "z", "50", String.valueOf(z.getCreationTime()), "lib" };
+        FSElement actual = z;
+        assertArrayEquals(expected, fileToStringArray((File) actual));
     }
 
     @Test
     public void verifyFileEqualitya() {
-        String[] expected = { "false", "a", "50", String.valueOf(x.getCreationTime()), "code" };
-        File actual = a;
-        assertArrayEquals(expected, fileToStringArray(actual));
+        FSElement a = fs.getRootDirs().get(0).getChildren().get(2).getChildren().get(1).getChildren().get(0);
+        String[] expected = { "false", "a", "50", String.valueOf(a.getCreationTime()), "code" };
+        FSElement actual = a;
+        assertArrayEquals(expected, fileToStringArray((File) actual));
     }
 
     @Test
     public void isFileTest() {
+        FSElement c = fs.getRootDirs().get(0).getChildren().get(2).getChildren().get(1).getChildren().get(2);
         assertFalse(c.isDirectory());
     }
 

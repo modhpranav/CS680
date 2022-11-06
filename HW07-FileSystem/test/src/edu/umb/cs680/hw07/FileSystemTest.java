@@ -1,15 +1,22 @@
 package edu.umb.cs680.hw07;
 
 import org.junit.jupiter.api.Test;
-
+import  org.junit.jupiter.api.BeforeAll;
 import static org.junit.jupiter.api.Assertions.assertNotNull;
 import static org.junit.jupiter.api.Assertions.assertSame;
 
 public class FileSystemTest {
 
+    public static FileSystem fs;
+
+    @BeforeAll
+    public static void setUpFS(){
+        fs = new TestFixtureInitializer().createFS();
+    }
+
     @Test
     public void getFileSystemNonNull() {
-        assertNotNull(FileSystem.getFileSystem());
+        assertNotNull(fs);
     }
 
     @Test

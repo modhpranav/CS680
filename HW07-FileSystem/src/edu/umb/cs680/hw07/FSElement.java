@@ -24,6 +24,10 @@ public abstract class FSElement {
         return parent;
     }
 
+    public LinkedList<FSElement> getChildren() {
+        return this.getChildren();
+    }
+
     public void setName(String name) {
         this.name = name;
     }
