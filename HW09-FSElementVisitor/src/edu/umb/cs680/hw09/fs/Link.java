@@ -1,4 +1,4 @@
-package edu.umb.cs680.hw08;
+package edu.umb.cs680.hw09.fs;
 
 import java.time.LocalDateTime;
 
@@ -7,8 +7,6 @@ public class Link extends FSElement {
     int size;
     public Link(Directory parent, String name, int size, LocalDateTime creationtime, FSElement target){
         super(parent, name, size, creationtime);
-        this.size=0;
-        this.target=target;
         if(parent!=null){
             parent.appendChild(this);}
     }
@@ -20,6 +18,10 @@ public class Link extends FSElement {
     public int getSize() {
         return size;
     }
+
+    public void accept(FSVisitor v){
+        v.visit(this);
+    };
 
     public int getTargetSize() {
         if(target instanceof Link)
