@@ -1,0 +1,28 @@
+Testcase: edu.umb.cs680.hw10.fs.CountingVisitorTest
+Test: verifyLinkCountWithoutAuthentication() took 12 milli sec(s)
+Test: verifyLinkCount() took 1 milli sec(s)
+Test: verifyFileCount() took 0 milli sec(s)
+Test: verifyDirectoryCount() took 1 milli sec(s)
+Test: verifyDirectoryCountWithoutAuthentication() took 1 milli sec(s)
+Test: verifyFileCountWithoutAuthentication() took 1 milli sec(s)
+Tests run: 6, Failures: 0, Skipped: 0, Aborted: 0, Time elapsed: 39 milli sec(s)
+------------- Standard Output ---------------
+x
+y
+c
+a
+b
+0
+x
+y
+c
+a
+b
+x
+y
+c
+a
+b
+5
+0
+------------- ---------------- ---------------
