@@ -1,9 +1,0 @@
-Testcase: edu.umb.cs680.hw07.FileSystemTest
-Test: getFileSystemSingletonTest() took 0 milli sec(s)
-Test: getFileSystemNonNull() took 1 milli sec(s)
-Tests run: 2, Failures: 0, Skipped: 0, Aborted: 0, Time elapsed: 4 milli sec(s)
-------------- Standard Output ---------------
-edu.umb.cs680.hw07.Directory@3028e50e
-lib
-home
-------------- ---------------- ---------------
