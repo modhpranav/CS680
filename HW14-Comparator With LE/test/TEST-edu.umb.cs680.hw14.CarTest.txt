@@ -1,0 +1,10 @@
+Testcase: edu.umb.cs680.hw14.CarTest
+Test: verifyMileageComparatorReverseOrderTest() took 10 milli sec(s)
+Test: verifyYearComparatorReverseOrderTest() took 1 milli sec(s)
+Test: verifyDominationComparatorNaturalOrderTest() took 1 milli sec(s)
+Test: verifyMileageComparatorNaturalOrderTest() took 0 milli sec(s)
+Test: verifyPriceComparatorReverseOrderTest() took 1 milli sec(s)
+Test: verifyYearComparatorNaturalOrderTest() took 1 milli sec(s)
+Test: verifyDominationComparatorReverseOrderTest() took 1 milli sec(s)
+Test: verifyPriceComparatorNaturalOrderTest() took 1 milli sec(s)
+Tests run: 8, Failures: 0, Skipped: 0, Aborted: 0, Time elapsed: 34 milli sec(s)
