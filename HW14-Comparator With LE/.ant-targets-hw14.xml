@@ -1,0 +1,7 @@
+clean
+clean-cache
+compile
+init
+resolve
+run
+test
